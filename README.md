@@ -1,4 +1,4 @@
-# confectionary
+# confectionery
 Resumo do Projeto:
 
 Sistema de vendas para uma confeitaria desenvolvido em JavaScript. O programa permite que funcionários realizem login, registrem pedidos de bolos, docinhos e salgadinhos, emitam notas fiscais e calculem automaticamente o valor total, a taxa de entrega e o prazo estimado de entrega. Além disso, o gerente pode acessar um relatório com o desempenho dos vendedores e o faturamento total do dia.
