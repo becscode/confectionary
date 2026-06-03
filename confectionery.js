@@ -101,8 +101,7 @@ function exibirTelaLogin () {
       exibirTelaLogin();
    }
 }
-exibirTelaLogin();
-imprimirMatriz(vendas);
+
 function exibirTelaInicial (){
   console.log ("1- Nova Venda");   
   console.log ("2 - Deslogar");
@@ -324,3 +323,5 @@ console.log("TOTAL FINAL: R$",totalFinal);
   console.log("Código de Barras:", codigoBarras);
   console.log("==========================================");
 }
+
+exibirTelaLogin();
