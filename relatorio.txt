@@ -1,0 +1,81 @@
+
+Equipe: Rebeca Linhares e Rebeca Suyane.
+
+Tema e objetivo do sistema
+
+O projeto consiste em um sistema de confeitaria desenvolvido em JavaScript, com o objetivo de registrar pedidos realizados por clientes, organizar as escolhas feitas durante a compra e emitir uma nota fiscal contendo o valor total e a previsão de entrega. Além disso, o sistema oferece uma tela de login para que somente pessoas autorizadas possam acessá-la, por intermédio de usuário e senha. Dessa forma, o gerente poderá acessar o  faturamento realizado por cada funcionário. 
+O sistema busca facilitar a organização dos pedidos da confeitaria, permitindo selecionar produtos, calcular valores automaticamente e informar o prazo estimado de entrega conforme a quantidade de itens solicitados.
+
+Descrição do problema
+
+Em uma confeitaria, os pedidos normalmente envolvem diversas escolhas, como tipo de bolo, recheio, cobertura, sabores de doces e quantidade de produtos. Quando essas informações não são organizadas corretamente, podem ocorrer erros no valor final, na produção e na entrega dos pedidos.
+O sistema será desenvolvido para solucionar esse problema, permitindo registrar todas as escolhas do cliente de maneira organizada e automática, além de calcular o valor total do pedido e gerar uma previsão de entrega.
+
+Funcionalidades previstas
+
+Primeiramente será solicitado o login e a senha do vendedor ou gerente. Depois um menu interativo no console irá perguntar se o funcionário quer:
+    • Realizar nova venda;
+    • Deslogar;
+    • Acessar Relatório Gerencial;
+Dependendo da escolha, o programa realizará funções diferentes. 
+Nova venda:
+    • Os produtos desejados poderão ser escolhidos; 
+    • Haverá opções de massa, recheio e cobertura dos bolos; 
+    • Os sabores e quantidades de docinhos e salgadinhos são personalizados;
+    • Opção de adicionar taxa de entrega à conta;
+
+Logo após isso, o sistema conseguirá: 
+
+    • Calcular automaticamente o valor total do pedido, esse que varia de acordo com as especificações escolhidas para cada produto; 
+    • Armazenar, no Relatório Gerencial, as vendas realizadas pelo funcionário logado;
+    • Calcular a previsão que o pedido ficará pronto; 
+    • Exibir uma nota fiscal com todas as informações da compra. Como também disponibilizará: data, nome do cliente, chave pix e código de barras gerados automaticamente;
+Deslogar:
+
+    • O funcionário sairá da sessão de vendas/ ou do Relatório Gerencial (se ele for o gerente);
+    • Um outro funcionário poderá logar;
+
+Relatório Gerencial:
+
+    • Mostrará o faturamento realizado por cada funcionário / e cada produto vendido por ele;
+    • Mostrará o faturamento total ao fim do dia;
+
+
+Estrutura lógica planejada
+
+O sistema será organizado utilizando funções, estruturas condicionais, estruturas de repetição e arrays.
+A lógica do sistema funcionará da seguinte forma:
+    1. Banco de Dados Simulado: Usa matrizes globais para guardar e buscar dados de produtos, funcionários e vendas.
+    2. Login de Usuário: Pede usuário/senha via prompt, valida com findIndex e repete se estiver errado.
+    3. Controle de Acesso: Usa switch case no menu principal e libera o relatório apenas para o "gerente".
+    4. Fluxo de Escolha: Guia o usuário por menus em cascata (Massas, Recheios e Coberturas) para montar a encomenda do bolo, menus feitos com switch cases. E no caso do pedido de docinhos e salgadinhos, há outro menu para os sabores. Além disso, ele  armazena a quantidade desejada em um uma variável.
+    5. Registro de Venda: Salva os itens escolhidos na matriz vendas atrelando-os ao ID do pedido e ao vendedor atual.
+    6. Regras de Entrega: Calcula prazos e taxas de forma automatizada com base na quantidade de itens. O código utiliza um laço for com if para  filtrar as vendas ativas, estruturas condicionais (if/else) para definir o frete, o objeto new Date() para registrar a data atual e o método Math.random() associado a funções auxiliares para gerar aleatoriamente o número da nota, a chave Pix e o código de barras exibidos no console.
+    7. Nota Fiscal: Filtra os produtos da venda ativa ( o sistema olha o número da venda atual (sequencialVenda), o laço for lê toda a lista de vendas feitas no dia e o if só deixa passar e exibir os itens que têm o mesmo número da venda atual; o resto é ignorado ). Ela também soma os valores e gera um cupom com chaves Pix e código de barras aleatórios.
+    8. Relatório Gerencial: Cruza os dados para exibir as vendas e o faturamento de cada funcionário, além do total do dia. Para isso, o código usa laços for para percorrer as matrizes de funcionários e vendas, condicionais if para filtrar os dados de cada vendedor, e operadores aritméticos (+=) combinados com funções auxiliares para somar e exibir os valores consolidados no console.
+
+Entradas e saídas esperadas
+
+Entradas
+O usuário deverá informar:
+    • Nome do cliente; 
+    • Produtos desejados; 
+    • Tipo de massa; 
+    • Tipo de recheio; 
+    • Tipo de cobertura;
+    • Quantidade de produtos; 
+    • Opção de entrega;
+
+Saídas
+O sistema exibirá, ao fim, uma nota fiscal com:
+    • Nome do cliente;
+    •  Data do dia;
+    • Produtos escolhidos; 
+    • Quantidade de cada item; 
+    • Valor total do pedido; 
+    • Taxa de entrega; 
+    • Previsão de entrega;
+    • N° da nota fiscal;
+    • Chave pix;
+    • Código de barras;
+
