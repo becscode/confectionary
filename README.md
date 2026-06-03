@@ -13,3 +13,5 @@ Desenvolvimento da nota fiscal com número, chave PIX e código de barras;
 Implementação do relatório gerencial e cálculo de faturamento;
 Adição da taxa de entrega e da opção de retirada no local;
 Melhorias na organização e apresentação das informações exibidas no console.
+
+Equipe: Rebeca Linhares Alencar e Rebeca Suyane da Silva Feitosa
