@@ -14,4 +14,10 @@ Implementação do relatório gerencial e cálculo de faturamento;
 Adição da taxa de entrega e da opção de retirada no local;
 Melhorias na organização e apresentação das informações exibidas no console.
 
+Para iniciar a experimentação com o código utilize um dos logins e senhas a baixo:
+
+1. "gerente" - "123";
+2. "vendedor1" - "456";
+3. "vendedor2" - "789";
+
 Equipe: Rebeca Linhares Alencar e Rebeca Suyane da Silva Feitosa
